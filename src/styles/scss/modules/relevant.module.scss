@@ -1,0 +1,73 @@
+@import "../lib/bootstrap-5.2.0-beta1/scss/functions";
+@import "../lib/bootstrap-5.2.0-beta1/scss/variables";
+
+.h-scroller {
+  --px: 1rem;
+  --gap: 2rem;
+}
+
+.item {
+  max-width: 500px;
+  width: 80%;
+  flex: 0 0 auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+
+  @media (min-width: 992px) {
+    width: 65%;
+    max-width: 400px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 50%;
+    max-width: 300px;
+  }
+}
+
+.h-scroller-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.h-scroller-container {
+  position: relative;
+
+  @media (min-width: 992px) {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  @media (min-width: 1400px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  background-color: #dedcdc;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  z-index: 10;
+  $svg-icon: url("data:image/svg+xml;utf8,<svg width='20' height='30' viewBox='0 0 20 30' fill='none' xmlns='http://www.w3.org/2000/svg'><g clip-path='url(#clip0_223_2)'><path d='M2.37695 1.407L18.429 14.58L1.40295 27.753' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' /></g><defs><clipPath id='clip0_223_2'><rect width='19.837' height='29.156' fill='white' /></clipPath></defs></svg>");
+  background-image: #{escape-svg($svg-icon)};
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%;
+  border-radius: 6px;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.prev-btn {
+  left: -3rem;
+  transform: rotateZ(180deg);
+}
+
+.next-btn {
+  right: -3rem;
+}

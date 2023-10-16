@@ -1,0 +1,45 @@
+.hero :global {
+  position: relative;
+  min-height: 220px;
+  background-color: black;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    opacity: .6;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      opacity: .4;
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: 1400px) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+  }
+}
+
+.btn {
+  flex-grow: 1;
+  @media (min-width: 992px) {
+    flex-grow: 0;
+  }
+}

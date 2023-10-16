@@ -1,0 +1,79 @@
+@tailwind utilities;
+
+:root {
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+
+  --tw-blur: blur(0);
+  --tw-brightness: brightness(1);
+  --tw-contrast: contrast(1);
+  --tw-grayscale: grayscale(0);
+  --tw-hue-rotate: hue-rotate(0deg);
+  --tw-invert: invert(0);
+  --tw-saturate: saturate(1);
+  --tw-sepia: sepia(0);
+  --tw-drop-shadow: drop-shadow(0 0);
+
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0deg;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+
+  --tw-content: "";
+}
+
+body {
+  --bs-body-font-family: "Lucida Sans", var(--bs-font-sans-serif);
+  --zoom: 90%;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 992px) {
+  body {
+    zoom: var(--zoom);
+  }
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.articulo-body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2a2a2a;
+}
+
+.articulo-body h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  color: #3d3d3d;
+}
+@media (min-width: 1024px) {
+  .articulo-body p {
+    font-size: 1.125rem;
+  }
+
+  .articulo-body h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .articulo-body h2 {
+    font-size: 24px;
+  }
+}
+
+.offcanvas-backdrop {
+  width: initial;
+  height: initial;
+  right: 0;
+  bottom: 0;
+}

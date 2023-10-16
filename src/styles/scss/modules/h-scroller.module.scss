@@ -1,0 +1,71 @@
+@import "../lib/bootstrap-5.2.0-beta1/scss/functions";
+@import "../lib/bootstrap-5.2.0-beta1/scss/variables";
+@import "../lib/bootstrap-5.2.0-beta1/scss/maps";
+@import "../lib/bootstrap-5.2.0-beta1/scss/mixins/breakpoints";
+
+.container {
+  overflow: hidden;
+  --bs-card-border-radius: 1rem;
+}
+
+.inner {
+  overflow-x: scroll;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-left: var(--px, 0);
+  padding-right: var(--px, 0);
+  gap: var(--gap, 0);
+
+  > * {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}
+.slot {
+  display: flex;
+  align-items: stretch;
+  flex: 1 0 100%;
+}
+
+.--list {
+  .inner {
+    --gap: 1rem;
+    --px: 23%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+    @include media-breakpoint-up(sm) {
+      .inner {
+        --px: 4rem;
+      }
+  
+      .slot {
+        flex: 1 0 45%;
+      }
+    }
+  
+    @include media-breakpoint-up(md) {
+      .inner {
+        scroll-padding: 0 var(--gap, 1rem);
+      }
+  
+      .slot {
+        flex: 1 0 35%;
+        scroll-snap-align: start;
+      }
+    }
+  
+    @include media-breakpoint-up(lg) {
+      .inner {
+        overflow-x: auto;
+        flex-wrap: wrap;
+        --gap: 2rem;
+        justify-content: center;
+      }
+  
+      .slot {
+        flex: 1 0 29%;
+      }
+    }
+}

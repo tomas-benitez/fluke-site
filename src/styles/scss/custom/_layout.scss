@@ -1,0 +1,49 @@
+@import "../lib/bootstrap-5.2.0-beta1/scss/functions";
+@import "variables";
+@import "../lib/bootstrap-5.2.0-beta1/scss/variables";
+@import "overrides";
+@import "../lib/bootstrap-5.2.0-beta1/scss/maps";
+@import "map-removals";
+@import "../lib/bootstrap-5.2.0-beta1/scss/mixins/breakpoints";
+
+html {
+  scroll-padding-top: var(--header-height);
+}
+
+main {
+  padding-top: var(--header-height, 100px);
+  // padding-bottom: map-get($map: $spacers, $key: 4);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+footer {
+  background-color: #333333;
+  padding-top: map-get($map: $spacers, $key: 6);
+  color: $gray-400;
+
+  a:hover,
+  a:focus {
+    color: $gray-600;
+    text-decoration: underline;
+  }
+
+  .footer-separator {
+    height: 60px;
+    background-image: url("data:image/svg+xml;utf8,<svg width='88' height='46' viewBox='0 0 88 46' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M73 0H14V46H73V0Z' fill='%23A7A7A7' /><path d='M72.5 0.5H14.5V45.5H72.5V0.5Z' stroke='%23707070' /><path d='M43.5 35C49.8513 35 55 29.8513 55 23.5C55 17.1487 49.8513 12 43.5 12C37.1487 12 32 17.1487 32 23.5C32 29.8513 37.1487 35 43.5 35Z' fill='white' /></svg>");
+    background-repeat: space no-repeat;
+    background-position: left center;
+  }
+
+  .footer-bottom {
+    padding-top: 3rem;
+    @media (min-width: 992px) {
+      text-align: start;
+    }
+  }
+}

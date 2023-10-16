@@ -1,0 +1,42 @@
+@import "../../lib/bootstrap-5.2.0-beta1/scss/functions";
+@import "../../lib/bootstrap-5.2.0-beta1/scss/variables";
+@import "../../lib/bootstrap-5.2.0-beta1/scss/maps";
+@import "../../lib/bootstrap-5.2.0-beta1/scss/mixins/breakpoints";
+
+.certifications {
+  display: flex;
+  align-items: center;
+  margin-bottom: map-get($map: $spacers, $key: 4);
+
+  * {
+    flex: 0 1 auto;
+    max-height: 65px;
+  }
+}
+
+.offer-card {
+  max-width: 500px;
+  width: 85%;
+  flex: 0 0 auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.offer-scroller {
+  --gap: 1rem;
+  --px: 1rem;
+}
+
+.no-stock {
+  padding: 1rem 5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.product-right {
+  padding-bottom: 48px;
+
+  @include media-breakpoint-up("xl") {
+    padding-right: 50px;
+  }
+}

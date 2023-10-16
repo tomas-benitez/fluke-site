@@ -1,0 +1,17 @@
+@import "../lib/bootstrap-5.2.0-beta1/scss/functions";
+@import "../lib/bootstrap-5.2.0-beta1/scss/variables";
+@import "../lib/bootstrap-5.2.0-beta1/scss/maps";
+@import "../lib/bootstrap-5.2.0-beta1/scss/mixins/breakpoints";
+
+.card {
+  box-shadow: $box-shadow-sm;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &-footer, &-header {
+    background-color: inherit;
+  }
+}
+
+.card-hover:hover {
+  box-shadow: 0 0.3rem 1.6rem 0.2rem rgb(0 0 0 / 7%);
+}

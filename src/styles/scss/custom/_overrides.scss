@@ -1,0 +1,48 @@
+// GLOBAL
+$theme-colors: map-merge($theme-colors, (
+  "dark-gray": #646464,
+  "info": #0058B3
+));
+
+// BREAKPOINTS
+$container-max-widths: map-merge($container-max-widths, (
+  "xxxl": 1760px,
+));
+
+// _ANCHOR_ NAVBAR
+$navbar-padding-y: $spacer;
+$navbar-dark-color: $gray-100;
+$navbar-dark-hover-color: rgba($white, .55);
+
+// _ANCHOR_ SHADOW
+$box-shadow-sm: 0 0.25rem 0.3rem rgb(0 0 0 / 3%);
+
+// _ANCHOR_ BORDER
+$border-color-translucent: rgba($black, 0.125);
+$border-width: 2px;
+
+// _ANCHOR_ BUTTONS
+$link-decoration: none;
+$btn-border-radius: $border-radius-sm;
+$btn-border-radius-lg: $border-radius-sm;
+
+//_ANCHOR_ CARDS
+$card-border-radius: $border-radius-lg;
+$card-border-color: rgba($gray-600, 0.225);
+
+//_ANCHOR_ TYPOGRAPHY
+$headings-font-weight: 400;
+$font-sizes: map-merge($font-sizes, ("small": 0.85rem));
+$link-color: inherit;
+
+$spacers: map-merge($map1: $spacers, $map2: (
+    4: $spacer * 2,
+    6: $spacer * 4.5,
+));
+
+// _ANCHOR_ ACCORDION
+$accordion-button-active-bg: rgba($gray-600, 0.125);
+$accordion-button-active-color: var(--#{$prefix}body-color);
+
+// _ANCHOR_ LINKS
+$link-hover-color: inherit;

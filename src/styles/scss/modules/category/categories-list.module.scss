@@ -1,0 +1,20 @@
+.card,
+.h-scroller-slot {
+  max-width: 220px;
+  max-height: 235px;
+
+  @media (min-width: 1400px) {
+    max-width: 241px;
+    max-height: 265px;
+  }
+}
+
+.card {
+  overflow: hidden;
+}
+
+@media (min-width: 1920px) {
+  .h-scroller-slot {
+    max-width: 225px;
+  }
+}

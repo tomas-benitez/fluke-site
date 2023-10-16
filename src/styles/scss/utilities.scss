@@ -1,0 +1,21 @@
+@import "lib/bootstrap-5.2.0-beta1/scss/_functions";
+
+// 2. Include any default variable overrides here
+@import "./custom/variables";
+@import "lib/bootstrap-5.2.0-beta1/scss/variables";
+
+
+// Maps overrides here
+@import "./custom/overrides";
+
+@import "lib/bootstrap-5.2.0-beta1/scss/maps";
+@import "lib/bootstrap-5.2.0-beta1/scss/mixins";
+@import "lib/bootstrap-5.2.0-beta1/scss/utilities";
+
+// Maps removals go here
+@import "./custom/map-removals";
+
+// Own utilities
+@import "./custom/utilities";
+
+@import "lib/bootstrap-5.2.0-beta1/scss/utilities/api";

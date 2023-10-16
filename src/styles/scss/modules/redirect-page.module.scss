@@ -1,0 +1,29 @@
+.loading {
+  height: 20px;
+  width: 100%;
+  background-color: var(--bs-gray-600);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 90%;
+    background-color: white;
+    border-radius: 50px;
+    animation: loading forwards 5s;
+  }
+}
+
+@keyframes loading {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 0%;
+  }
+}

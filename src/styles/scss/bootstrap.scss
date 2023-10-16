@@ -1,0 +1,49 @@
+@import "lib/bootstrap-5.2.0-beta1/scss/_functions";
+
+// 2. Variables
+@import "./custom/variables";
+@import "lib/bootstrap-5.2.0-beta1/scss/variables";
+
+// Overrides here
+@import "./custom/overrides";
+
+@import "lib/bootstrap-5.2.0-beta1/scss/maps";
+@import "lib/bootstrap-5.2.0-beta1/scss/mixins";
+
+// Maps removals go here
+@import "./custom/map-removals";
+
+@import "lib/bootstrap-5.2.0-beta1/scss/root";
+// 4. Include any optional Bootstrap CSS as needed
+@import "lib/bootstrap-5.2.0-beta1/scss/reboot";
+@import "lib/bootstrap-5.2.0-beta1/scss/type";
+@import "lib/bootstrap-5.2.0-beta1/scss/images";
+@import "lib/bootstrap-5.2.0-beta1/scss/containers";
+@import "lib/bootstrap-5.2.0-beta1/scss/grid";
+@import "lib/bootstrap-5.2.0-beta1/scss/tables";
+@import "lib/bootstrap-5.2.0-beta1/scss/forms";
+@import "lib/bootstrap-5.2.0-beta1/scss/buttons";
+@import "lib/bootstrap-5.2.0-beta1/scss/transitions";
+@import "lib/bootstrap-5.2.0-beta1/scss/dropdown";
+@import "lib/bootstrap-5.2.0-beta1/scss/button-group";
+@import "lib/bootstrap-5.2.0-beta1/scss/nav";
+@import "lib/bootstrap-5.2.0-beta1/scss/navbar";
+@import "lib/bootstrap-5.2.0-beta1/scss/card";
+@import "lib/bootstrap-5.2.0-beta1/scss/accordion";
+@import "lib/bootstrap-5.2.0-beta1/scss/breadcrumb";
+// @import "lib/bootstrap-5.2.0-beta1/scss/pagination";
+// @import "lib/bootstrap-5.2.0-beta1/scss/badge";
+// @import "lib/bootstrap-5.2.0-beta1/scss/alert";
+// @import "lib/bootstrap-5.2.0-beta1/scss/progress";
+@import "lib/bootstrap-5.2.0-beta1/scss/list-group";
+@import "lib/bootstrap-5.2.0-beta1/scss/close";
+// @import "lib/bootstrap-5.2.0-beta1/scss/toasts";
+// @import "lib/bootstrap-5.2.0-beta1/scss/modal";
+// @import "lib/bootstrap-5.2.0-beta1/scss/tooltip";
+// @import "lib/bootstrap-5.2.0-beta1/scss/popover";
+@import "lib/bootstrap-5.2.0-beta1/scss/carousel";
+// @import "lib/bootstrap-5.2.0-beta1/scss/spinners";
+@import "lib/bootstrap-5.2.0-beta1/scss/offcanvas";
+// @import "lib/bootstrap-5.2.0-beta1/scss/placeholders";
+
+@import "lib/bootstrap-5.2.0-beta1/scss/helpers";

@@ -1,0 +1,115 @@
+@import "../lib/bootstrap-5.2.0-beta1/scss/functions";
+@import "../lib/bootstrap-5.2.0-beta1/scss/variables";
+
+.navbar {
+  --bs-nav-link-font-size: 1.25rem;
+  --bs-navbar-nav-link-padding-x: 1.5rem;
+  --bs-navbar-padding-y: 0;
+  // height: 80px;
+  // height: 100px;
+  background-color: #212121;
+  padding-bottom: .5rem;
+  :global(.navbar-toggler) {
+    --bs-border-width: 0;
+  }
+
+  :global(.nav-link) {
+    font-size: 1rem;
+  }
+  @media (min-width: 1200px) {
+    padding-top: .5rem;
+  }
+  @media (min-width: 1400px) {
+    // height: 100px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    :global(.nav-link) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.dropdown-label {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  &::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.3rem;
+    $svg-icon: url("data:image/svg+xml;utf8,<svg width='13' height='6' viewBox='0 0 13 6' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M6.5 6L0 0H13L6.5 6Z' fill='white' /></svg>");
+    background-image: #{escape-svg($svg-icon)};
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+  }
+
+  &:hover::after {
+    opacity: .6;
+  }
+}
+
+.navbar-offcanvas-body {
+  padding-left: 0;
+  padding-right: 0;
+
+  :global(.navbar-nav) {
+    & > * {
+      position: relative;
+      padding-top: .4rem;
+      padding-bottom: .4rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10.553' height='17.013' viewBox='0 0 10.553 17.013'><path id='Path_28' data-name='Path 28' d='M1854.1,5607.229l7.566-8.392,7.979,8.392' transform='translate(5607.918 -1853.362) rotate(90)' fill='none' stroke='%23707070' stroke-width='2' /></svg>");
+        width: 1rem;
+        height: 1rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      &:not(:last-child) {
+        border-bottom-width: 1px;
+        border-bottom-color: var(--bs-gray-500);
+        border-bottom-style: solid;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .offcanvas-body-main {
+    :global(.navbar-nav){
+      & > * {
+        padding-left: .5rem;
+        padding-right: .5rem;
+        border-bottom-width: 0 !important;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.custom-close-btn {
+  background-color: transparent;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("data:image/svg+xml;utf8,#{escape-svg('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'10.553\' height=\'17.013\' viewBox=\'0 0 10.553 17.013\'><path id=\'Path_28\' data-name=\'Path 28\' d=\'M1854.1,5607.229l7.566-8.392,7.979,8.392\' transform=\'translate(5607.918 -1853.362) rotate(90)\' fill=\'none\' stroke=\'%23707070\' stroke-width=\'2\' /></svg>')}");
+  background-repeat: no-repeat;
+  background-position: right; // Because of the rotation applied under, this actually aligns to the left
+  transform: rotateZ(180deg);
+}
